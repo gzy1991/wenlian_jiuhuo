@@ -1,0 +1,43 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.out_all_body{
+	width: 100%;
+}
+li{
+	list-style: none;
+}
+.first_menu > li{
+	
+	margin-top: 1em;
+		
+}
+.first_menu div{
+	font-size: 1em;
+	margin:0.25em;
+	height: 2em;
+	line-height: 2em;
+}
+.first_menu_text{
+	background-color: #f2f2f2;
+	padding-left: 1em;
+	font-weight: 600;
+}
+
+.second_menu li div{
+	padding-left: 0.6em;	
+}
+
+.second_menu{
+	display: none;
+}
+.sin{
+	float: right;
+	height: 0;
+	width: 0;
+	border: 10px solid transparent;
+	border-top: 10px solid #999999;
+	margin: 10px 20px 0  0;
+	
+}
