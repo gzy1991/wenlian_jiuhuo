@@ -12,7 +12,7 @@
 </head>
 <body>
     <p class="xqtitle">文化惠民服务需求采集表</p>
-    <form class="xqform">
+    <form class="xqform" id = "demondCollectionForm">
         <div class="clearfix xqform-line">
             <div class="pull-left form-text">我是：</div>
             <select class="pull-left form-content" name="userType">
@@ -75,9 +75,10 @@
         <div class="clearfix xqform-line">
             <div class="pull-left form-text">需求说明：</div>
         </div>
-        <textarea class="form-textarea" name="demond"></textarea>
+        <label for="demond">需求说明：</label>
+        <textarea class="form-textarea" name="demond" id="demond"></textarea>
         <div class="form-btn clearfix">
-            <button class="submit pull-left" type="submit" value="提交">提交</button>
+            <button class="submit pull-left" type="submit" value="提交" id ="submit">提交</button>
             <button class="reset pull-right">重置</button>
         </div>
     </form>

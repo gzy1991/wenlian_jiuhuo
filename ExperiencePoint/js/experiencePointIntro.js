@@ -19,7 +19,6 @@ function test(){
 }
 /*绑定校验*/
 var validate =function(){
-    $()
     $("#experienceForm").validate({
         rules:{
             name:{
@@ -101,5 +100,8 @@ $(function(){
 });
 $(document).ready(function(){
     validate();
+    $("#submit").on("click",function(){
+        alert("提交成功!");
+    })
 	
 })
