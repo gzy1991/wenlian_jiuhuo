@@ -13,7 +13,9 @@ function test(){
 	}else{
 		$(".appointment").text("不需要提前预约");
 	}
-	/*$('#addressName').pa*/
+	
+	$("#addressName").attr('placeholder',allMenu[firstId].secondMenu[secondId].place);
+	$("#themename").attr('placeholder',allMenu[firstId].firstMenu);
 }
 
 

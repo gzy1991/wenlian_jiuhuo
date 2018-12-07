@@ -65,7 +65,7 @@ select:focus,textarea:focus,input:focus{
 /*在线预约*/
 .xqform{
     width: 90%;
-    margin: 0 auto 1.5em;
+    margin: 1.5em auto;
 
 }
 .xqform-line{
@@ -112,7 +112,6 @@ select.form-content {
     padding: 0 0.2em;
     margin: 1em 0 1.5em 0;
     padding-bottom: 1em;
-    border-bottom: 0.2em solid #f7f6f6;
 }
 .form-btn button{
     width: 48%;

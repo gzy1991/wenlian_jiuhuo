@@ -29,10 +29,7 @@
     </div>
     <div class="contentbox" id="form">
         <form class="xqform" action="">
-            <div class="form-btn clearfix">
-                <button class="submit pull-left">提交</button>
-                <button class="reset pull-right">清空</button>
-            </div>
+            
             <div class="clearfix xqform-line">
                 <div class="pull-left form-text">姓名：</div>
                 <input class="form-content" id="name" name="name">
@@ -66,7 +63,7 @@
             </div>
             <div class="clearfix xqform-line">
                 <div class="pull-left form-text">预约体验点名称：</div>
-                <input class="form-content" placeholder="白云亭文化艺术中心" id="addressName" name = "addressName">
+                <input class="form-content"  id="addressName" name ="addressName" readonly unselectable="on">
             </div>
             <div class="clearfix xqform-line">
                 <div class="pull-left form-text">预约时间：</div>
@@ -74,7 +71,7 @@
             </div>
             <div class="clearfix xqform-line">
                 <div class="pull-left form-text">预约人数：</div>
-                <input class="form-co目的ntent" id="number" name="number">
+                <input class="form-content" id="number" name="number">
             </div>
             <div class="clearfix xqform-line">
                 <div class="pull-left form-text">创作目的说明：</div>
@@ -82,15 +79,11 @@
             <textarea class="form-textarea" id="purpose" name="purpose"></textarea>
             <div class="clearfix xqform-line">
                 <div class="pull-left form-text">题材：</div>
-                <select class="pull-left form-content"  name="theme">
-                    <option>高新技术体验点</option>
-                    <option>传统文化体验点</option>
-                    <option>红色文化体验点</option>
-                    <option>文娱文化体验点</option>
-                    <option>自然生态体验点</option>
-                    <option>基层体验点</option>
-                    <option>国企一线体验点</option>
-                </select>
+                <input class="form-content"  id="themename" name ="themename" readonly unselectable="on">
+            </div>
+            <div class="form-btn clearfix">
+                <button class="submit pull-left">提交</button>
+                <button class="reset pull-right">清空</button>
             </div>
         </form>
     </div>
