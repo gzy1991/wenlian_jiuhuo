@@ -3,7 +3,8 @@
 	margin: 0;
 }
 .out_all_body{
-	width: 100%;
+	width: 96%;
+	margin: 0 auto;
 }
 li{
 	list-style: none;
@@ -15,9 +16,9 @@ li{
 }
 .first_menu div{
 	font-size: 1em;
-	margin:0.25em;
-	height: 2em;
-	line-height: 2em;
+	/*margin:0.25em;*/
+	height: 3em;
+	line-height: 3em;
 }
 .first_menu_text{
 	background-color: #f2f2f2;
@@ -38,6 +39,6 @@ li{
 	width: 0;
 	border: 0.6em solid transparent;
 	border-top: 0.6em solid #999999;
-	margin: 0.7em 1.5em 0  0;
+	margin: 1.3em 1.1em 0 0
 	
 }

@@ -24,7 +24,7 @@ function loaderMenu () {
 
 /*点击一级菜单*/
 function clickFirstMenu (obj) {
-		$("#"+obj.id+"").next().toggle();
+		$("#"+obj.id+"").next().slideToggle(400);
 		/*获取下三角的ID*/
 		var sinId = obj.id.substring(0,1)+"sin";
 		
@@ -38,6 +38,11 @@ function clickSecondMenu(obj,firstNameId){
 	 * 一级菜单名字   allMenu[firstNameId].firstMenu
 	 * 二级菜单对象   allMenu[firstNameId].secondMenu[obj.id]
 	 * */
-	alert(allMenu[firstNameId].firstMenu);
-	alert(allMenu[firstNameId].secondMenu[obj.id].name);
+/*	alert(allMenu[firstNameId].firstMenu);
+	alert(allMenu[firstNameId].secondMenu[obj.id].name);*/
+	
+	sessionStorage.setItem("first", firstNameId);
+	sessionStorage.setItem("second", obj.id);
+	window.location.href = "ExperiencePointIntro.html";
+	
 }
