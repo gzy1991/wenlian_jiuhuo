@@ -18,4 +18,6 @@ function test(){
 	$("#themename").attr('placeholder',allMenu[firstId].firstMenu);
 }
 
-
+$(document).ready(function(){
+	
+})

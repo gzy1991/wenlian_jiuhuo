@@ -67,7 +67,7 @@
             </div>
             <div class="clearfix xqform-line">
                 <div class="pull-left form-text">预约时间：</div>
-                <input type="text" name="date" id="date" readonly class="input form-content" placeholder="请输入日期" />
+                <input type="text" name="date" id="date"  class="input form-content" placeholder="请输入日期" />
             </div>
             <div class="clearfix xqform-line">
                 <div class="pull-left form-text">预约人数：</div>
@@ -113,7 +113,7 @@
             endYear: currYear + 10 //结束年份
         };
 
-        $("#USER_AGE").mobiscroll($.extend(opt['date'], opt['default']));
+        $("#date").mobiscroll($.extend(opt['date'], opt['default']));
 
     });
     $(function(){
