@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    width:100%;
+    height: 100%;
+}
+body {
+    font-size:1em;
+    font-family:Arial,"微软雅黑",sans-serif;
+    line-height:1.3;
+    color:#313131;
+    background:#fff;
+}
+table {
+    margin: 1em;
+}
+td {
+    text-align:center;
+    font-size:0.5em;
+    padding-left: 1em;
+}
+#title {
+    text-align:center;
+    margin: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#content {
+    margin: 1em;
+}
+#content p {
+    text-indent:2em;
+}
+#address {
+    margin: 1em 1em 0em 1em;
+    text-indent:2em;
+}
+#isAppointment {
+    margin: 0em 1em 0em 1em;
+    text-indent:2em;
+}
