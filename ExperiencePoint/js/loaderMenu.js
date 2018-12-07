@@ -1,5 +1,4 @@
-$(document).ready(function(){
-	
+$(document).ready(function(){	
 	loaderMenu();
 })
 
@@ -35,8 +34,10 @@ function clickFirstMenu (obj) {
 	}
 /*点击二级菜单*/
 function clickSecondMenu(obj,firstNameId){
-	/*一级菜单名字   allMenu[firstNameId].firstMenu*/
+	/*
+	 * 一级菜单名字   allMenu[firstNameId].firstMenu
+	 * 二级菜单对象   allMenu[firstNameId].secondMenu[obj.id]
+	 * */
 	alert(allMenu[firstNameId].firstMenu);
-	/*二级菜单对象   allMenu[firstNameId].secondMenu[obj.id]*/
 	alert(allMenu[firstNameId].secondMenu[obj.id].name);
 }
