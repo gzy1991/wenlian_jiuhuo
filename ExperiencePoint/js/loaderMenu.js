@@ -43,6 +43,6 @@ function clickSecondMenu(obj,firstNameId){
 	
 	sessionStorage.setItem("first", firstNameId);
 	sessionStorage.setItem("second", obj.id);
-	window.location.href = "ExperiencePointIntro.html";
+	window.location.href = "creatExperiencePoints.html";
 	
 }

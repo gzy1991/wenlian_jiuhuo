@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>创建体验点</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="./css/creatExperiencePoints.css"/>
+    <link rel="stylesheet" href="./css/normalize3.0.2.min.css"/>
+    <link rel="stylesheet" href="./css/mobiscroll.css"/>
+    <link rel="stylesheet" href="./css/mobiscroll_date.css"/>
+    
+    <script src="js/experiencePointIntro.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/allJson.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body onload=" test()">
+<nav class="clearfix">
+    <a class="tydjj pull-left">体验点简介</a>
+    <a class="zxyy pull-left">在线预约</a>
+</nav>
+<section>
+    <div class="contentbox" id="introduction">
+        <p class="introduction-title"></p>
+        <div class="introduction-content"></div>
+        <div class="infor">地点：<span class="address">南京市 鼓楼区 白云亭文化艺术中心</span></div>
+        <div class="infor">是否需要预约：<span class="appointment">需要提前预约</span></div>
+    </div>
+    <div class="contentbox" id="form">
+        <form class="xqform" action="">
+            <div class="form-btn clearfix">
+                <button class="submit pull-left">提交</button>
+                <button class="reset pull-right">清空</button>
+            </div>
+            <div class="clearfix xqform-line">
+                <div class="pull-left form-text">姓名：</div>
+                <input class="form-content">
+            </div>
+            <div class="clearfix xqform-line">
+                <div class="pull-left form-text">联系电话：</div>
+                <input class="form-content">
+            </div>
+            <div class="clearfix xqform-line">
+                <div class="pull-left form-text">所在单位：</div>
+                <input class="form-content">
+            </div>
+            <div class="clearfix xqform-line">
+                <div class="pull-left form-text">职务：</div>
+                <input class="form-content">
+            </div>
+            <div class="clearfix xqform-line">
+                <div class="pull-left form-text">所属艺术家协会：</div>
+                <select class="pull-left form-content">
+                    <option>文学</option>
+                    <option>戏剧</option>
+                    <option>音乐</option>
+                    <option>舞蹈</option>
+                    <option>美术</option>
+                    <option>书法</option>
+                    <option>动漫影视</option>
+                    <option>摄影</option>
+                    <option>民间文艺</option>
+                    <option>文艺评论</option>
+                </select>
+            </div>
+            <div class="clearfix xqform-line">
+                <div class="pull-left form-text">预约体验点名称：</div>
+                <input class="form-content" placeholder="白云亭文化艺术中心" id="addressName">
+            </div>
+            <div class="clearfix xqform-line">
+                <div class="pull-left form-text">预约时间：</div>
+                <input type="text" name="USER_AGE" id="USER_AGE" readonly class="input form-content" placeholder="请输入日期" />
+            </div>
+            <div class="clearfix xqform-line">
+                <div class="pull-left form-text">预约人数：</div>
+                <input class="form-content">
+            </div>
+            <div class="clearfix xqform-line">
+                <div class="pull-left form-text">创作目的说明：</div>
+            </div>
+            <textarea class="form-textarea"></textarea>
+            <div class="clearfix xqform-line">
+                <div class="pull-left form-text">题材：</div>
+                <select class="pull-left form-content">
+                    <option>高新技术体验点</option>
+                    <option>传统文化体验点</option>
+                    <option>红色文化体验点</option>
+                    <option>文娱文化体验点</option>
+                    <option>自然生态体验点</option>
+                    <option>基层体验点</option>
+                    <option>国企一线体验点</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/mobiscroll_date.js" charset="gb2312"></script>
+<script src="./js/mobiscroll.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 50, //开始年份
+            endYear: currYear + 10 //结束年份
+        };
+
+        $("#USER_AGE").mobiscroll($.extend(opt['date'], opt['default']));
+
+    });
+    $(function(){
+        $("#introduction").css("display","block");
+        $("nav a:first").addClass("active");
+        $("nav a").on("click",function(){
+            $("nav a").stop(false,false);
+            $("nav a").removeClass("active");
+            $(this).addClass("active");
+            $("section .contentbox:eq("+$(this).index("nav a")+")").fadeIn(500).siblings().hide();
+        });
+    });
+</script>
+</body>
+</html>
