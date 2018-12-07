@@ -36,8 +36,8 @@ li{
 	float: right;
 	height: 0;
 	width: 0;
-	border: 10px solid transparent;
-	border-top: 10px solid #999999;
-	margin: 10px 20px 0  0;
+	border: 0.6em solid transparent;
+	border-top: 0.6em solid #999999;
+	margin: 0.7em 1.5em 0  0;
 	
 }
