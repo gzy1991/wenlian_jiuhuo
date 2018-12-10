@@ -3,7 +3,7 @@ $(document).ready(function(){
         rules:{
             demond:{
                 required:true,
-                maxlength:5
+                maxlength:500
             }
         },
         messages:{
@@ -24,7 +24,4 @@ $(document).ready(function(){
     $("#reset").on("click",function(){
         $("#demond").val("");
     })
-
-
-
 })
