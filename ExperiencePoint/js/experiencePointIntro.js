@@ -16,57 +16,11 @@ function test(){
 	
 	$("#addressName").attr('placeholder',allMenu[firstId].secondMenu[secondId].name);//体验点名称
 	$("#themename").attr('placeholder',allMenu[firstId].firstMenu);
+	
+	
 }
-/*绑定校验*/
-var validate =function(){
-    $("#experienceForm").validate({
-        rules:{
-            name:{
-                requires:true,
-                maxlength:10
-            },
-            phone:{
-                requires:true,
-                rangelength:[8,12],
-                digits:true
-            },
-            company:{
-                maxlength:30
-            },
-            duty:{
-                maxlength:15
-            },
-            /*date:{
-                requires:true
-            },*/
-            peopleNumber:{
-                requires:true,
-                digits:true,
-                maxlength:15
-            },
-            purpose:{
-                maxlength:100
-            }
-        },
-        messages:{
-            name:"请输入长度小于10的名字",
-            phone:{
-                requires:"请输入联系电话",
-                rangelength:"电话长度在8-12之间",
-                digits:"必须为整数"
-            },
-            company:"长度不能超过30",
-            duty:"长度不能超过15",
-            /*date:"请选择预约时间",*/
-            peopleNumber:{
-                requires:"请输入预约人数",
-                digits:"必须是整数",
-                maxlength:"长度不超过15"
-            },
-            purpose:"长度不超过100"
-        }
-    })
-}
+
+
 $(function () {
     var currYear = (new Date()).getFullYear();
     var opt={};
@@ -98,10 +52,4 @@ $(function(){
         $("section .contentbox:eq("+$(this).index("nav a")+")").fadeIn(500).siblings().hide();
     });
 });
-$(document).ready(function(){
-    validate();
-    $("#submit").on("click",function(){
-        alert("提交成功!");
-    })
 	
-})
