@@ -67,6 +67,7 @@ $(document).ready(function(){
             },
             phone:{
                 required:true,
+                digits:true,
                 rangelength:[8,12]
 
             },
@@ -93,6 +94,7 @@ $(document).ready(function(){
             },
             phone:{
                 required:"请输入联系电话",
+                digits:"必须是数字",
                 rangelength:"电话长度在8-12之间"
             },
             company:"长度不能超过30",
