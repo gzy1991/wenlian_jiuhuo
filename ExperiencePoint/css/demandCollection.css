@@ -61,6 +61,9 @@ a,input,button{
 .pull-right{
     float:right
 }
+.error{
+    color: red;
+}
 select:focus,textarea:focus{
     outline: none;
 }

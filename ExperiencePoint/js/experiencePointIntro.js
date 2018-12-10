@@ -1,8 +1,4 @@
 function test(){
-/*	alert(allMenu[first].secondMenu[second].name)
-	
-	$('#title').text(allMenu[first].secondMenu[second].name);*/
-
 	var firstId= sessionStorage.getItem("first");
 	var secondId= sessionStorage.getItem("second");
 	$('.introduction-title').text(allMenu[firstId].secondMenu[secondId].name);
@@ -13,13 +9,9 @@ function test(){
 	}else{
 		$(".appointment").text("不需要提前预约");
 	}
-	
 	$("#addressName").attr('placeholder',allMenu[firstId].secondMenu[secondId].name);//体验点名称
 	$("#themename").attr('placeholder',allMenu[firstId].firstMenu);
-	
-	
 }
-
 
 $(function () {
     var currYear = (new Date()).getFullYear();
@@ -52,4 +44,71 @@ $(function(){
         $("section .contentbox:eq("+$(this).index("nav a")+")").fadeIn(500).siblings().hide();
     });
 });
-	
+
+$(document).ready(function(){
+    /*绑定“清空”按钮*/
+    $("#clear").on("click",function(){
+        $("#username").val("");
+        $("#phone").val("");
+        $("#company").val("");
+        $("#duty").val("");
+        $("#association").val("");
+        $("#date").val("");
+        $("#peopleNumber").val("");
+        $("#purpose").val("");
+    })
+    /*校验*/
+    $("#experienceForm").validate({
+        rules: {
+            username: {
+                required: true,//必写
+                maxlength:10,//最大长度
+                minlength: 2    //最小长度
+            },
+            phone:{
+                required:true,
+                rangelength:[8,12]
+
+            },
+            company:{
+                maxlength:30
+            },
+            duty:{
+                maxlength:15
+            },
+            peopleNumber:{
+                required:true,
+                digits:true,
+                maxlength:15
+            },
+            purpose:{
+                maxlength:100
+            }
+        },
+        messages: {
+            username: {
+                required: "请输入用户名",
+                maxlength: "长度小于10",
+                minlength: "长度大于2"
+            },
+            phone:{
+                required:"请输入联系电话",
+                rangelength:"电话长度在8-12之间"
+            },
+            company:"长度不能超过30",
+            duty:"长度不能超过15",
+            peopleNumber:{
+                required:"请输入预约人数",
+                digits:"必须是整数",
+                maxlength:"长度不超过15"
+            },
+            purpose:"长度不超过100"
+        }
+    });
+})
+
+$.validator.setDefaults({
+    submitHandler: function() {
+        alert("提交成功!");
+    }
+});
