@@ -6,6 +6,7 @@ function test(){
 	$(".address").text(allMenu[firstId].secondMenu[secondId].place)
 	if(allMenu[firstId].secondMenu[secondId].isOrder=="是"){
 		$(".appointment").text("需要提前预约");
+        $(".zxyy").show();
 	}else{
 		$(".appointment").text("不需要提前预约");
 	}
